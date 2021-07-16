@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/normalized.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Doctor Visits</title>
+  </head>
+  <body>
+    <header class="page__header">
+      <div class="container header__container">
+        <div class="header__logo">
+          <img src="./img/site-logo.png" alt="Green cross" height="60" />
+        </div>
+        <a href="#" id="create-visit" class="btn-evt btn header__btn">Создать визит</a>
+        <a href="#" id="enter" class="btn-evt btn header__btn btn-active"></a>
+      </div>
+    </header>
+    <main>
+      <div class="page__search">
+        <div class="container">
+          <form class="form__search" id="search">
+            <input id="search-title" class="search-title" type="text" placeholder="Введите заголовок" />
+            <select id="status-select" class="search-select">
+              <option selected>Все</option>
+              <option value="Open">Будущий></option>
+              <option value="Done">Готов</option>
+            </select>
+            <select id="urgency-select" class="search-select">
+              <option selected>Все</option>
+              <option value="Неотложный">Неотложный</option>
+              <option value="Приоритетный">Приоритетный</option>
+              <option value="Обычный">Обычный</option>
+            </select>
+            <input type="submit" value="Найти" class="btn search-btn" id="search-btn" />
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div id="root"></div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
